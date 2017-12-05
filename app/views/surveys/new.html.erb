@@ -1,0 +1,50 @@
+
+<h2>Your Information</h2>
+<% if flash[:success] %>
+<div id="success">
+   <p><%= flash[:success] %></p>
+</div>
+<% end %>
+
+
+<table id="survey_form">
+
+<tr>
+    <td>Name:</td>
+    <td><%= @result.name %></td>
+</tr>
+<tr>
+<td>Location:</td>
+<td><%= @result.location %></td>
+</tr>
+<tr>
+<td>Language:</td>
+<td><%= @result.language %></td>
+</tr>
+<tr>
+<td>Comment:</td>
+<td><%= @result.comment %></td>
+</tr>
+
+</table>
+
+<h2>All Submitted Information</h2>
+<table>
+<thead>
+  <tr>
+    <td>Name</td>
+    <td>Location</td>
+    <td>Language</td>
+    <td>Comment</td>
+  </tr>
+</thead>
+<tbody>
+<% @surveys.each do |x| %>
+    <tr>
+        <td><%= x.name%></td>
+        <td><%= x.location%></td>
+        <td><%= x.language%></td>
+        <td><%= x.comment%></td>
+    </tr>
+</tbody>
+<% end %>

@@ -1,0 +1,25 @@
+<form action='/process_survey' method=POST>
+<input name="authenticity_token" type="hidden" value="token_value">
+<label for="name">Your name</label>
+<input type="text" name="name">
+<br>
+<label for="location">Dojo location</label>
+<select name="location">
+    <option value="Mountain View">Mountain View</option>
+    <option value="San Jose">San Jose</option>
+    <option value="Seattle">Seattle</option>
+</select>
+<br>
+<label for="language">Favorite Language</label>
+<select name="language">
+    <option value="JavaScript">JavaScript</option>
+    <option value="ROR">ROR</option>
+    <option value="Java">Java</option>
+</select>
+<br>
+<label for="comment">Comment(optional)</label>
+<br>
+<input type="text" name="comment">
+<br>
+<input type="submit" value="Submit">
+</form>
